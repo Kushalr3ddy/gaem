@@ -1,3 +1,3 @@
 @echo off
-gcc main.c -o main.exe
-main
+gcc gaem.c -o gaem.exe
+gaem
