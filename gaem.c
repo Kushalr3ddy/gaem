@@ -27,18 +27,15 @@ int main(){
         //player movement
             //horizontal
         if(ch =='d'){
-            //if(i == iter){
-                //printf("x");
-                iter++;
-                ch='\n';
-            //}
+            iter++;
+            ch='\n';
+            
         }
         if(ch =='a'){
-            //if(i ==iter){
-                //printf("x");
-                iter--;
-                ch='\n';
-                //}
+            
+            iter--;
+            ch='\n';
+            
         }
 
         //player movement
