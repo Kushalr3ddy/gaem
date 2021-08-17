@@ -6,9 +6,13 @@
 int main(){
     int size =30;
     int count =0;
-    int iter=1; // iteration of the loop
+    int playerx=1; // iteration of the loop
     char ch;
     int vert=1;
+    int score;
+    int objx,objy;
+    objx=20;
+    objy=2;
 
     //beginning of while loop
     while(1){
@@ -27,13 +31,13 @@ int main(){
         //player movement
             //horizontal
         if(ch =='d'){
-            iter++;
+            playerx++;
             ch='\n';
             
         }
         if(ch =='a'){
             
-            iter--;
+            playerx--;
             ch='\n';
             
         }
@@ -49,19 +53,19 @@ int main(){
             ch='\n';
         }
         //restricting movements from crossing borders
-        if(iter<0){iter =29;}
-        if(iter>size){iter=0;}
-        if(vert<0){vert =count/2;}
+        if(playerx<0){playerx =29;}
+        if(playerx>size){playerx=0;}
+        if(vert<0){vert =size/2;}
         if(vert>size/2){vert=0;}
         
-        if(i == iter&& vert ==count){
+        if(i == playerx&& vert ==count){
                 printf("x");
                 //vert++;
                 }
 
         if(i==0){printf("0");}
         if(i==29){printf("0\n");}
-        if((i!=29 || i!=0) && i!=iter){printf(" ");}
+        if((i!=29 || i!=0) && i!=playerx){printf(" ");}
         
         }
     count++;
@@ -70,13 +74,13 @@ int main(){
     //bottom line of the rectangle
     for(int i=0;i<size+1;i++){printf("0");}
     printf("\n");
-    printf("%d\n",iter);
-    printf("%d\n",vert);
+    printf("playerx = %d\n",playerx);
+    printf("playery = %d\n",vert);
     printf("%c",ch);
     Sleep(200);
     count =0;
     system("cls");
-    //iter++;
+    //playerx++;
     }
     return 0;
 }
