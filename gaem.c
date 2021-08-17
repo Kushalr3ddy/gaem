@@ -2,30 +2,31 @@
 #include<stdio.h>
 #include<windows.h>
 #include<conio.h>
-
+#include "rand.h"
 int main(){
     int size =30;
-    int count =0;
+    int count =0;//vertical size
     int playerX=1; // iteration of the loop
-    char ch;
     int playerY=1;
+    char ch;
     int score=0;
     int objx,objy;
-    objx=20;
-    objy=2;
+    objx=randint(2,29,1);
+    objy=randint(2,29,1);
 
     //beginning of while loop
     while(1){
     printf(" ");
+
     //top line of the rectangle
-    for(int i=1;i<size+1;i++){printf("0");}
+    for(int i=1;i<size+1;i++){printf("-");}
 
     /*
     vertical size is kept as half of the horizontal size 
     cause nextline characters give more space in between 
     compared to horizontal where ther is no space
     */
-    while(count <size/2){ 
+    while(count <size/2){ //prints vertical borders
     if(kbhit()){ch =getch();} // this part is to read the keyboard presses
     for(int i=0,j=0;i<size;i++){
         //player movement
@@ -58,15 +59,17 @@ int main(){
         if(playerY<0){playerY =size/2;}
         if(playerY>size/2){playerY=0;}
         
+        //the object to which the player should reach
         if(objx ==i && objy==count){printf("Q");}
-        if(playerX ==objx&&playerY==objy){score++;}
+        if(playerX ==objx&&playerY==objy){score++;}//score increment
+        
         if(i == playerX&& playerY ==count){
                 printf("x");
                 //playerY++;
                 }
 
-        if(i==0){printf("0");}
-        if(i==29){printf("0\n");}
+        if(i==0){printf("|");}
+        if(i==29){printf("|\n");}
         if((i!=29 || i!=0) && i!=playerX){printf(" ");}
         
         }
@@ -74,7 +77,7 @@ int main(){
     }//end while loop
 
     //bottom line of the rectangle
-    for(int i=0;i<size+1;i++){printf("0");}
+    for(int i=0;i<size+1;i++){printf("-");}
     printf("\n");
     printf("playerX = %d\n",playerX);
     printf("playery = %d\n",playerY);
