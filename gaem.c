@@ -6,10 +6,10 @@
 int main(){
     int size =30;
     int count =0;
-    int playerx=1; // iteration of the loop
+    int playerX=1; // iteration of the loop
     char ch;
-    int vert=1;
-    int score;
+    int playerY=1;
+    int score=0;
     int objx,objy;
     objx=20;
     objy=2;
@@ -31,13 +31,13 @@ int main(){
         //player movement
             //horizontal
         if(ch =='d'){
-            playerx++;
+            playerX++;
             ch='\n';
             
         }
         if(ch =='a'){
             
-            playerx--;
+            playerX--;
             ch='\n';
             
         }
@@ -45,27 +45,29 @@ int main(){
         //player movement
             //vertical
         if(ch =='w'){
-            vert--;
+            playerY--;
             ch='\n';
         }
         if(ch =='s'){
-            vert++;
+            playerY++;
             ch='\n';
         }
         //restricting movements from crossing borders
-        if(playerx<0){playerx =29;}
-        if(playerx>size){playerx=0;}
-        if(vert<0){vert =size/2;}
-        if(vert>size/2){vert=0;}
+        if(playerX<0){playerX =29;}
+        if(playerX>size){playerX=0;}
+        if(playerY<0){playerY =size/2;}
+        if(playerY>size/2){playerY=0;}
         
-        if(i == playerx&& vert ==count){
+        if(objx ==i && objy==count){printf("Q");}
+        if(playerX ==objx&&playerY==objy){score++;}
+        if(i == playerX&& playerY ==count){
                 printf("x");
-                //vert++;
+                //playerY++;
                 }
 
         if(i==0){printf("0");}
         if(i==29){printf("0\n");}
-        if((i!=29 || i!=0) && i!=playerx){printf(" ");}
+        if((i!=29 || i!=0) && i!=playerX){printf(" ");}
         
         }
     count++;
@@ -74,13 +76,14 @@ int main(){
     //bottom line of the rectangle
     for(int i=0;i<size+1;i++){printf("0");}
     printf("\n");
-    printf("playerx = %d\n",playerx);
-    printf("playery = %d\n",vert);
-    printf("%c",ch);
-    Sleep(200);
+    printf("playerX = %d\n",playerX);
+    printf("playery = %d\n",playerY);
+    printf("%c\n",ch);
+    printf("score:%d",score);
+    Sleep(100);
     count =0;
     system("cls");
-    //playerx++;
+    //playerX++;
     }
     return 0;
 }
