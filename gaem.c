@@ -15,6 +15,13 @@ int main(){
     objy=randint(2,29,1);
 
     //beginning of while loop
+    printf("                _        \n               | |   \n ___ _ __   ___| | __\n/ __| '_ \\ / _ \\ |/ /\n\\__ \\ | | |  __/   < \n|___/_| |_|\\___|_|\\_\\ \n                     ");
+    printf("\n\tpress any key to continue");
+    getch();
+    system("cls");
+    printf("use w,a,s,d to move");
+    printf("\n\tpress any key to start gaem");
+    getch();
     while(1){
     printf(" ");
 
