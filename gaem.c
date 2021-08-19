@@ -76,8 +76,8 @@ int main(){
                 }
 
         if(i==0){printf("|");}
-        if(i==29){printf("|\n");}
-        if((i!=29 || i!=0) && i!=playerX){printf(" ");}
+        if(i==size-1){printf("|\n");}
+        if((i!=size-1 || i!=0) && i!=playerX){printf(" ");}
         
         }
     count++;
