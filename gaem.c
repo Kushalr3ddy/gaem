@@ -2,7 +2,7 @@
 #include<stdio.h>
 #include<windows.h>
 #include<conio.h>
-#include "rand.h"
+//#include "rand.h"
 int main(){
     int size =30;
     int count =0;//vertical size
@@ -11,8 +11,8 @@ int main(){
     char ch;
     int score=0;
     int objx,objy;
-    objx=randint(2,29,1);
-    objy=randint(2,29,1);
+    //objx=randint(2,29,1);
+    //objy=randint(2,29,1);
 
     //beginning of while loop
     printf("                _        \n               | |   \n ___ _ __   ___| | __\n/ __| '_ \\ / _ \\ |/ /\n\\__ \\ | | |  __/   < \n|___/_| |_|\\___|_|\\_\\ \n                     ");
@@ -67,8 +67,8 @@ int main(){
         if(playerY>size/2){playerY=0;}
         
         //the object to which the player should reach
-        if(objx ==i && objy==count){printf("Q");}
-        if(playerX ==objx&&playerY==objy){score++;}//score increment
+        //if(objx ==i && objy==count){printf("Q");}
+        //if(playerX ==objx&&playerY==objy){score++;}//score increment
         
         if(i == playerX&& playerY ==count){
                 printf("x");
