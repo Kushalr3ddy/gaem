@@ -70,6 +70,7 @@ int main(){
         //if(objx ==i && objy==count){printf("Q");}
         //if(playerX ==objx&&playerY==objy){score++;}//score increment
         
+        //prints the player on screen
         if(i == playerX&& playerY ==count){
                 printf("x");
                 //playerY++;
@@ -86,10 +87,10 @@ int main(){
     //bottom line of the rectangle
     for(int i=0;i<size+1;i++){printf("-");}
     printf("\n");
-    printf("playerX = %d\n",playerX);
+    printf("playerX = %d\t\t",playerX);
+    printf("score:%d\n",score);
     printf("playery = %d\n",playerY);
     printf("%c\n",ch);
-    printf("score:%d",score);
     Sleep(100);
     count =0;
     system("cls");
