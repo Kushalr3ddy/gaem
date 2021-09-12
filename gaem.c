@@ -76,7 +76,7 @@ int main(){
             ch='\n';
         }
         //restricting movements from crossing borders
-        if(playerX<0){playerX =29;}
+        if(playerX<0){playerX =size-1;}
         if(playerX>size){playerX=0;}
         if(playerY<0){playerY =size/2;}
         if(playerY>size/2){playerY=0;}
