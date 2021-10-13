@@ -5,18 +5,6 @@
 #include<time.h>
 
 
-//function for getting random number for the object coordinates(not yet used)
-int randint(int lower, int upper, int count){
-    time_t t = time(NULL);
-    srand(t);
-    int num;
-    for (int i=0; i < count; i++) {
-        int num = (rand() %(upper - lower + 1)) + lower;
-        //printf("%d ", num);
-    }
-    return num;
-}
-
 int main(){
     int size =30;
     int count =0;//vertical size
