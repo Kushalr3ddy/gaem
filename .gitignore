@@ -9,3 +9,5 @@ lgaem.c
 rand.h
 main.c
 shid.c 
+run.sh
+install.sh
