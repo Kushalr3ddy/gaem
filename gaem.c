@@ -33,7 +33,7 @@ int main(){
     printf("\n\tpress any key to continue");
     getch();
     system("cls");
-    printf("use w,a,s,d to move");
+    printf("use w,a,s,d to move\npress q to quit");
     printf("\n\tpress any key to start gaem");
     getch();
     //beginning of while loop
@@ -53,7 +53,10 @@ int main(){
     for(int i=0,j=0;i<size;i++){
         //player movement
             //horizontal
-        if(ch =='d'){
+        if(ch=='q'){
+		exit(0);
+		}
+		if(ch =='d'){
             playerX++;
             ch='\n';
             
@@ -93,7 +96,7 @@ int main(){
 
         if(i==0){printf("|");}
         if(i==size-1){printf("|\n");}
-        if((i!=size-1 || i!=0) && i!=playerX){printf(" ");}
+        if((i!=size-1 && i!=0) && i!=playerX){printf(" ");}
         
         }
     count++;
