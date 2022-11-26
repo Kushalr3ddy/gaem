@@ -6,7 +6,7 @@
 
 
 int main(){
-    int size =30;
+    int size =20;
     int count =0;//vertical size
     int playerX=1; // iteration of the loop
     int playerY=1;
@@ -41,7 +41,7 @@ int main(){
     for(int i=0,j=0;i<size;i++){
         //player movement
             //horizontal
-        if(ch=='q'){
+        if(ch=='q'){// pressing q quits the game
 		exit(0);
 		}
 		if(ch =='d'){
